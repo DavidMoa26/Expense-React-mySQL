@@ -1,6 +1,6 @@
 import './App.css';
 import Expenses from './components/Expenses';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import NewExpense from './components/NewExpense'
 import Axios from 'axios';
 
