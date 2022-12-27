@@ -1,0 +1,40 @@
+.edit-expense__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .edit-expense__control label {
+    font-weight: bold;
+    display: block;
+  }
+  
+  .edit-expense__control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 15rem;
+    max-width: 100%;
+  }
+  
+  .edit-expense__actions {
+    text-align: center;
+  }
+
+  .edit-expense__actions button{
+    font-weight: bold;
+    font-size: large;
+    margin: 0.2rem;
+    border-radius: 20px;
+    border : 3px solid purple;
+    width: 12rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+
+  .edit-expense__actions button:hover{
+    opacity: 0.8;
+  }
