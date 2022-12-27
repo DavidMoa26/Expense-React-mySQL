@@ -5,6 +5,8 @@ import Axios from 'axios'
 const ExpenseForm = (props) => {
 
 
+
+
     // create states for input form
     const [newItem, setItem] = useState('')
     const [newAmount, setAmount] = useState('')
@@ -25,6 +27,7 @@ const ExpenseForm = (props) => {
 
     // submit
     const submitHandler = (e) => {
+        e.preventDefault();
         // create object to store the data from the states
         const data = {
             item: newItem,
@@ -35,7 +38,7 @@ const ExpenseForm = (props) => {
 
 
 
-        Axios.post('https://expense-app.herokuapp.com//post', {
+        Axios.post('https://expense-app.herokuapp.com/post', {
             item: data.item,
             price: data.price,
             date: new Date(newDate)
@@ -46,8 +49,6 @@ const ExpenseForm = (props) => {
         })
 
 
-        // cancel refresh page
-        e.preventDefault();
 
         // send new expense to NewExpense component
         props.onSendDataToNewExpense(data);

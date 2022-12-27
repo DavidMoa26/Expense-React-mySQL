@@ -10,9 +10,11 @@ function App() {
   const [dbData, setDbData] = useState([]);
 
   useEffect(() => {
-    Axios.get('https://expense-app.herokuapp.com//expenses').then((response) => {
-      setDbData(response.data);
-    })
+    Axios.get('https://expense-app.herokuapp.com/expenses')
+      .then((response) => {
+        setDbData(response.data);
+      })
+      .catch((err) => { console.log(err) })
   }, []);
 
   dbData.forEach(element => {
