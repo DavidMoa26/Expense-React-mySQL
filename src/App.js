@@ -10,7 +10,7 @@ function App() {
   const [dbData, setDbData] = useState([]);
 
   useEffect(() => {
-    Axios.get('https://expense-app.herokuapp.com/expenses')
+    Axios.get('http://localhost:3001/expenses')
       .then((response) => {
         setDbData(response.data);
       })

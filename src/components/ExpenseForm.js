@@ -4,9 +4,6 @@ import Axios from 'axios'
 
 const ExpenseForm = (props) => {
 
-
-
-
     // create states for input form
     const [newItem, setItem] = useState('')
     const [newAmount, setAmount] = useState('')
@@ -38,7 +35,7 @@ const ExpenseForm = (props) => {
 
 
 
-        Axios.post('https://expense-app.herokuapp.com/post', {
+        Axios.post('http://localhost:3001/post', {
             item: data.item,
             price: data.price,
             date: new Date(newDate)

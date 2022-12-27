@@ -50,7 +50,7 @@ const EditForm = (props) => {
 
 
 
-        Axios.put('https://expense-app.herokuapp.com/update', {
+        Axios.put('http://localhost:3001/update', {
             item: newItem,
             price: newAmount,
             date: new Date(newDate),
