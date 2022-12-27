@@ -25,7 +25,7 @@ const ExpenseItem = (props) => {
 
     const deleteHandler = (id) => {
         console.log(id);
-        Axios.delete(`http://localhost:3001/delete/${id}`)
+        Axios.delete(`https://expense-app.herokuapp.com/delete/${id}`)
             .then((response) => {
                 console.log(response);
             })

@@ -35,7 +35,7 @@ const ExpenseForm = (props) => {
 
 
 
-        Axios.post('http://localhost:3001/post', {
+        Axios.post('https://expense-app.herokuapp.com/post', {
             item: data.item,
             price: data.price,
             date: new Date(newDate)

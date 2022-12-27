@@ -9,7 +9,7 @@ function App() {
 
   const [dbData, setDbData] = useState([]);
 
-  Axios.get('http://us-cdbr-east-06.cleardb.net/expenses')
+  Axios.get('https://expense-app.herokuapp.com/expenses')
     .then((response) => {
       setDbData(response.data);
     })

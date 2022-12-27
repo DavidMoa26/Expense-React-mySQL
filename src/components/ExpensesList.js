@@ -7,7 +7,7 @@ const ExpensesList = (props) => {
 
     const [data, setData] = useState([]);
 
-    Axios.get('http://localhost:3001/expenses')
+    Axios.get('https://expense-app.herokuapp.com/expenses')
         .then((response) => {
             setData(response.data);
         })
