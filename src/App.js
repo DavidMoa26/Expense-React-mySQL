@@ -9,13 +9,11 @@ function App() {
 
   const [dbData, setDbData] = useState([]);
 
-  useEffect(() => {
-    Axios.get('http://localhost:3001/expenses')
-      .then((response) => {
-        setDbData(response.data);
-      })
-      .catch((err) => { console.log(err) })
-  }, []);
+  Axios.get('http://us-cdbr-east-06.cleardb.net/expenses')
+    .then((response) => {
+      setDbData(response.data);
+    })
+    .catch((err) => { console.log(err) })
 
   dbData.forEach(element => {
     element.date = (new Date(element.date));;
